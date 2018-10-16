@@ -11,7 +11,7 @@ class Header extends React.Component {
           <div className="header-container-left">
             <div className="header-logo">
               <Link to="/">
-                <img src="./../assets/comprend-logo-transparent.png" alt="Comprend logo" />
+                <img src="./assets/comprend-logo-transparent.png" alt="Comprend logo" />
               </Link>
             </div>
           </div>

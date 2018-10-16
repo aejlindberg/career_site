@@ -42,12 +42,12 @@ class LandingPage extends React.Component {
   }
   render() {
     const jobImages = [
-      "/assets/images/118710.jpg",
-      "/assets/images/118066.jpg",
-      "/assets/images/66941.jpg",
-      "/assets/images/47466.jpg",
-      "/assets/images/47238.jpg",
-      "/assets/images/7814.jpg"
+      "./assets/images/118710.jpg",
+      "./assets/images/118066.jpg",
+      "./assets/images/66941.jpg",
+      "./assets/images/47466.jpg",
+      "./assets/images/47238.jpg",
+      "./assets/images/7814.jpg"
     ]
     return (
       <div className="wrapper">
