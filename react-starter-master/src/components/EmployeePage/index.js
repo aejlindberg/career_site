@@ -10,7 +10,7 @@ class EmployeePage extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
 
     const url = "https://hellotechnigo.comprendwebsites.net/api/users"
 
