@@ -57,7 +57,7 @@ class SingleJob extends React.Component {
         })
       })
 
-    const employeeUrl = "http://hellotechnigo.comprendwebsites.net/api/users"
+    const employeeUrl = "https://hellotechnigo.comprendwebsites.net/api/users"
 
     fetch(employeeUrl)
       .then(response => response.json())
@@ -130,15 +130,10 @@ class SingleJob extends React.Component {
           <p>{match}</p>
 
           <h2>#comprendlife</h2>
-          <p>The things we do are exciting and meaningful – our work makes a
-          difference to our clients and we are committed to contributing to
-          success. And we deliver well. We are proud of what we achieve and
-          try to celebrate our victories. We have a firm belief that team work
-          pays off. We like each other and help each other out. Our reality means
-          we need to constantly change the way we think and work on our development.
-          We are eager to learn from each other´s experiences and to follow what
-          goes on in the world outside Comprend. We have a flat organisation, an
-          open climate and we´d love to hear about your crazy ideas!
+          <p>The things we do are exciting and meaningful – our work makes a difference to our clients and we are committed to contributing to success.
+        And we deliver well. We are proud of what we achieve and try to celebrate our victories.
+        We have a firm belief that team work pays off. We like each other and help each other out.
+        Our reality means we need to constantly change the way we think and work on our development. We are eager to learn from each other's experiences and to follow what goes on in the world outside Comprend. We have a flat organisation, an open climate and we'd love to hear about your crazy ideas!
           </p>
 
           <h2 className="center-text">Some of your colleagues</h2>
