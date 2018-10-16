@@ -130,29 +130,34 @@ class SingleJob extends React.Component {
           <p>{match}</p>
 
           <h2>#comprendlife</h2>
-          <p>The things we do are exciting and meaningful – our work makes a difference to our clients and we are committed to contributing to success.
-        And we deliver well. We are proud of what we achieve and try to celebrate our victories.
-        We have a firm belief that team work pays off. We like each other and help each other out.
-        Our reality means we need to constantly change the way we think and work on our development. We are eager to learn from each other's experiences and to follow what goes on in the world outside Comprend. We have a flat organisation, an open climate and we'd love to hear about your crazy ideas!
+          <p>The things we do are exciting and meaningful – our work makes a
+          difference to our clients and we are committed to contributing to
+          success. And we deliver well. We are proud of what we achieve and
+          try to celebrate our victories. We have a firm belief that team work
+          pays off. We like each other and help each other out. Our reality means
+          we need to constantly change the way we think and work on our development.
+          We are eager to learn from each other´s experiences and to follow what
+          goes on in the world outside Comprend. We have a flat organisation, an
+          open climate and we´d love to hear about your crazy ideas!
           </p>
 
           <h2 className="center-text">Some of your colleagues</h2>
           <div className="single-job-image-container">
-          {this.state.employees.map(employee => (
-            <div className="colleague-container">
-              <EmployeeComponent
+            {this.state.employees.map(employee => (
+              <div className="colleague-container">
+                <EmployeeComponent
                   key={employee.id}
                   name={employee.name}
-                image={employee.pictureUrl} />
-            </div>
-          ))}
+                  image={employee.pictureUrl} />
+              </div>
+            ))}
           </div>
-            <div className="single-job-navigation-container">
+          <div className="single-job-navigation-container">
             <div className="single-job-navigation-item left-text">
               <Link to={`/jobs/${previousJob}`} onClick={this.getJobInfo}>&#8592; Previous Post</Link>
             </div>
             <div className="single-job-navigation-item">
-              <a href="#">Back to List</a>
+              <Link to="/jobs"> Back to List</Link>
             </div>
             <div className="single-job-navigation-item right-text">
               <Link to={`/jobs/${nextJob}`} onClick={this.getJobInfo}>Next Post &#8594;</Link>
