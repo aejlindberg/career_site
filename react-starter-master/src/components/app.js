@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
 import SingleJobPage from "./SingleJobPage"
 import JobListing from "./JobListing"
 import LandingPage from "./LandingPage"

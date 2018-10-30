@@ -13,7 +13,7 @@ class LandingPage extends React.Component {
 
   componentDidMount() {
     // Get Jobs from jobs-API
-    const JobsUrl = "http://hellotechnigo.comprendwebsites.net/api/jobs"
+    const JobsUrl = "https://hellotechnigo.comprendwebsites.net/api/jobs"
 
     fetch(JobsUrl)
       .then(response => {
@@ -27,7 +27,7 @@ class LandingPage extends React.Component {
       })
 
       // Get Emplyees from employee-API
-    const employeesUrl = "http://hellotechnigo.comprendwebsites.net/api/users"
+    const employeesUrl = "https://hellotechnigo.comprendwebsites.net/api/users"
     // Fetch code for EMPLOYEES
     fetch(employeesUrl)
       .then(response => {
@@ -42,12 +42,12 @@ class LandingPage extends React.Component {
   }
   render() {
     const jobImages = [
-      "/assets/images/118710.jpg",
-      "/assets/images/118066.jpg",
-      "/assets/images/66941.jpg",
-      "/assets/images/47466.jpg",
-      "/assets/images/47238.jpg",
-      "/assets/images/7814.jpg"
+      "./assets/images/118710.jpg",
+      "./assets/images/118066.jpg",
+      "./assets/images/66941.jpg",
+      "./assets/images/47466.jpg",
+      "./assets/images/47238.jpg",
+      "./assets/images/7814.jpg"
     ]
     return (
       <div className="wrapper">

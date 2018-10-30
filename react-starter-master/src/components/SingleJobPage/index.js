@@ -20,7 +20,7 @@ class SingleJob extends React.Component {
 
     const pathUrl = this.props.match.params.id
 
-    const jobUrl = `http://hellotechnigo.comprendwebsites.net/api/jobs/${pathUrl}`
+    const jobUrl = `https://hellotechnigo.comprendwebsites.net/api/jobs/${pathUrl}`
 
     fetch(jobUrl)
       .then(response => response.json())
@@ -30,7 +30,7 @@ class SingleJob extends React.Component {
         })
       })
 
-    const jobsUrl = "http://hellotechnigo.comprendwebsites.net/api/jobs"
+    const jobsUrl = "https://hellotechnigo.comprendwebsites.net/api/jobs"
 
     fetch(jobsUrl)
       .then(response => response.json())
@@ -46,8 +46,6 @@ class SingleJob extends React.Component {
           }
         })
         const { jobIndex, jobList } = this.state
-        console.log("jobList", jobList)
-        console.log("jobIndex", jobIndex)
 
         const nextJobId = jobList[jobIndex + 1].id
         this.setState({
@@ -59,13 +57,13 @@ class SingleJob extends React.Component {
         })
       })
 
-    const employeeUrl = "http://hellotechnigo.comprendwebsites.net/api/users"
+    const employeeUrl = "https://hellotechnigo.comprendwebsites.net/api/users"
 
     fetch(employeeUrl)
       .then(response => response.json())
       .then(employees => {
         const removeInvalidNames = employee => (!(employee.name === "" || employee.name === null || employee.name.includes("@")))
-        const placeholder = "/assets/images/placeholder.png"
+        const placeholder = "./assets/images/placeholder.png"
 
         employees.forEach(employee => {
           if (employee.pictureUrl === "") {
@@ -115,7 +113,7 @@ class SingleJob extends React.Component {
           <Link to="/jobs">&#8592; Back to List</Link>
           <h1>{title}</h1>
           <p className="preamble"><span>{city}. </span>{intro}</p>
-          <img src={`/assets/images/${id}.jpg`} alt="" />
+          <img src={`./assets/images/${id}.jpg`} alt="" />
           <div className="single-job-button-container">
             <button className="button-apply">Apply for the job</button>
             <button className="button-share">Share the job</button>
@@ -140,21 +138,21 @@ class SingleJob extends React.Component {
 
           <h2 className="center-text">Some of your colleagues</h2>
           <div className="single-job-image-container">
-          {this.state.employees.map(employee => (
-            <div className="colleague-container">
-              <EmployeeComponent
+            {this.state.employees.map(employee => (
+              <div className="colleague-container">
+                <EmployeeComponent
                   key={employee.id}
                   name={employee.name}
-                image={employee.pictureUrl} />
-            </div>
-          ))}
+                  image={employee.pictureUrl} />
+              </div>
+            ))}
           </div>
-            <div className="single-job-navigation-container">
+          <div className="single-job-navigation-container">
             <div className="single-job-navigation-item left-text">
               <Link to={`/jobs/${previousJob}`} onClick={this.getJobInfo}>&#8592; Previous Post</Link>
             </div>
             <div className="single-job-navigation-item">
-              <a href="#">Back to List</a>
+              <Link to="/jobs"> Back to List</Link>
             </div>
             <div className="single-job-navigation-item right-text">
               <Link to={`/jobs/${nextJob}`} onClick={this.getJobInfo}>Next Post &#8594;</Link>
